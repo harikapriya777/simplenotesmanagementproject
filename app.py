@@ -4,7 +4,7 @@ from otp import genotp
 from cmail import send_mail
 from stoken import endata, dndata
 from mysql.connector import (connection)
-mydb = connection.MySQLConnection(user='root', password='Puppy@555',host='localhost',database='snm')
+mydb = connection.MySQLConnection(user='flaskuser', password='Password',host='localhost',database='flaskdb')
 import flask_excel as excel
 import re
 app = Flask(__name__)
@@ -420,4 +420,4 @@ def newpassword(data):
 
 
 if __name__ == '__main__':
-    app.run(debug = True, use_reloader = True)
+    app.run()
